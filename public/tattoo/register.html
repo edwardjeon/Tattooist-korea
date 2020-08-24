@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+    
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>TATTOO - ISANG</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+</head>
+    
+<body>
+    
+    <!-- ======= Top Bar ======= -->
+    <section id="topbar" class="d-none d-lg-block">
+        <div class="container d-flex">
+          <div class="contact-info mr-auto">
+            <!-- <i class="icofont-envelope"></i><a href="mailto:contact@example.com">contact@example.com</a>
+            <i class="icofont-phone phone-icon"></i> +1 5589 55488 55 -->
+          </div>
+          <!--<<div class="social-links">
+            <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+            <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+            <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+            <a href="#" class="skype"><i class="icofont-skype"></i></a>
+            <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+          </div> -->
+          <div class="social-links">
+            <i class="icofont-user"></i><a href="#">업체 로그인</a>
+            <i class="icofont-users"></i><a href="#">업체 회원가입</a>
+          </div>
+        </div>
+    </section>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+
+          <div class="logo mr-auto">
+            <h1 class="text-light"><a href="index.html"><span>TATTOO</span> ISANG</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          </div>
+
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="area.html">지역별 업체검색</a></li>
+                <li><a href="category.html">장르별 업체검색</a></li>
+                <li><a href="part.html">부위별 업체검색</a></li>
+                <li><a href="advertisement.html">광고안내</a></li>
+            </ul>
+          </nav><!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
+    
+    
+    <!-- ======= Main ======= -->
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+          <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+              <h2>업체 회원가입</h2>
+              <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>회원가입</li>
+              </ol>
+            </div>
+
+          </div>
+        </section><!-- End Breadcrumbs -->
+        
+        
+        <section class="my-form">
+            <div class="cotainer">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header text-center" text-align="center">업체 회원가입</div>
+                                <div class="card-body">
+                                    <form name="my-form" onsubmit="return validform()" action="#" method="get">
+                                        <div class="form-group row">
+                                            <label for="user_id" class="col-md-4 col-form-label text-md-right">아이디</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="userId" class="form-control" name="user_id" placeholder="4~12자 영문 대소문자, 숫자">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label for="password1" class="col-md-4 col-form-label text-md-right">비밀번호</label>
+                                            <div class="col-md-6">
+                                                <input type="password" id="password1" class="form-control" placeholder="4~12자 영문 대소문자, 숫자">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label for="password2" class="col-md-4 col-form-label text-md-right">비밀번호 확인</label>
+                                            <div class="col-md-6">
+                                                <input type="password" id="password2" class="form-control" placeholder="4~12자 영문 대소문자, 숫자">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="username" class="col-md-4 col-form-label text-md-right">이름</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="username" class="form-control" name="username" placeholder="예) 김타투">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row">
+                                            <label for="mail" class="col-md-4 col-form-label text-md-right">이메일</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="mail" class="form-control" name="email-address" placeholder="예) tattoo-isang@naver.com">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="phone" class="col-md-4 col-form-label text-md-right">연락처</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="phone" class="form-control" placeholder="예) 010-1234-5678">
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- <div class="form-group row">
+                                            <div class="col-md-6">
+                                                <button type="submit" class="btn btn-primary">회원가입</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button type="reset" class="btn">취소</button>
+                                            </div>
+                                        </div> -->
+                                        
+                                        <div class="form-group">
+                                            <div class="btn-group col-md-6 offset-md-4">
+                                                <button type="submit" class="btn btn-primary">회원가입</button>
+                                                <button type="reset" class="btn btn-danger">취소하기</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <script>
+            
+            function validform() {
+
+                // var a = document.forms["my-form"]["full-name"].value;
+                // var b = document.forms["my-form"]["email-address"].value;
+                // var c = document.forms["my-form"]["username"].value;
+                // var d = document.forms["my-form"]["permanent-address"].value;
+                // var e = document.forms["my-form"]["nid-number"].value;
+
+                // if (a==null || a.length() < )
+                // {
+                //     alert("Please Enter Your Full Name");
+                //     return false;
+                // }else if (b==null || b=="")
+                // {
+                //     alert("Please Enter Your Email Address");
+                //     return false;
+                // }else if (c==null || c=="")
+                // {
+                //     alert("Please Enter Your Username");
+                //     return false;
+                // }else if (d==null || d=="")
+                // {
+                //     alert("Please Enter Your Permanent Address");
+                //     return false;
+                // }else if (e==null || e=="")
+                // {
+                //     alert("Please Enter Your NID Number");
+                //     return false;
+                // }
+                
+                var userId = document.forms["my-form"]["userId"].value;
+                var password1 = document.forms["my-form"]["password1"].value;
+                var password2 = document.forms["my-form"]["password2"].value;
+                var email = document.forms["my-form"]["mail"].value;
+                var username = document.forms["my-form"]["username"].value;
+                var phone = document.forms["my-form"]["phone"].value;
+            
+                if (!checkUserId(userId)) 
+                {
+                    return false;
+                } 
+                else if (!checkPassword(userId, password1, password2)) 
+                {
+                    return false;
+                } 
+                else if (username == "")
+                {
+                    alert("이름을 입력해주세요!");
+                    return false;
+                }
+                else if (!checkMail(email)) 
+                {
+                    return false;
+                }
+                else if (phone == "")
+                {
+                    alert("연락처를 입력해주세요!");
+                    return false;
+                }
+            
+
+            }
+            
+            function checkExistData(value, dataName) {
+                if (value == "") {
+                    alert(dataName + " 입력해주세요!");
+                    return false;
+                }
+                return true;
+            }
+            
+            function checkUserId(id) {
+                //Id가 입력되었는지 확인하기
+                if (!checkExistData(id, "아이디를"))
+                    return false;
+
+                var idRegExp = /^[a-zA-z0-9]{4,12}$/; //아이디 유효성 검사
+                if (!idRegExp.test(id)) {
+                    alert("아이디는 영문 대소문자와 숫자 4~12자리로 입력해야합니다!");
+                    form.userId.value = "";
+                    form.userId.focus();
+                    return false;
+                }
+                return true; //확인이 완료되었을 때
+            }
+
+            function checkPassword(id, password1, password2) {
+                //비밀번호가 입력되었는지 확인하기
+                if (!checkExistData(password1, "비밀번호를"))
+                    return false;
+                //비밀번호 확인이 입력되었는지 확인하기
+                if (!checkExistData(password2, "비밀번호 확인을"))
+                    return false;
+
+                var password1RegExp = /^[a-zA-z0-9]{4,12}$/; //비밀번호 유효성 검사
+                if (!password1RegExp.test(password1)) {
+                    alert("비밀번호는 영문 대소문자와 숫자 4~12자리로 입력해야합니다!");
+                    form.password1.value = "";
+                    form.password1.focus();
+                    return false;
+                }
+                //비밀번호와 비밀번호 확인이 맞지 않다면..
+                if (password1 != password2) {
+                    alert("두 비밀번호가 맞지 않습니다.");
+                    form.password1.value = "";
+                    form.password2.value = "";
+                    form.password2.focus();
+                    return false;
+                }
+
+                //아이디와 비밀번호가 같을 때..
+                if (id == password1) {
+                    alert("아이디와 비밀번호는 같을 수 없습니다!");
+                    form.password1.value = "";
+                    form.password2.value = "";
+                    form.password2.focus();
+                    return false;
+                }
+                return true; //확인이 완료되었을 때
+            }
+
+            function checkMail(mail) {
+                //mail이 입력되었는지 확인하기
+                if (!checkExistData(mail, "이메일을"))
+                    return false;
+
+                var emailRegExp = /^[A-Za-z0-9_]+[A-Za-z0-9]*[@]{1}[A-Za-z0-9]+[A-Za-z0-9]*[.]{1}[A-Za-z]{1,3}$/;
+                if (!emailRegExp.test(mail)) {
+                    alert("이메일 형식이 올바르지 않습니다!");
+                    form.mail.value = "";
+                    form.mail.focus();
+                    return false;
+                }
+                return true; //확인이 완료되었을 때
+            }
+
+        </script>
+
+    </main><!-- End #main -->
+    
+    
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-lg-4 col-4">
+                <div class="footer-info">
+                  <h3>TATTOO ISANG</h3>
+                  <!-- <p>
+                    A108 Adam Street <br>
+                    NY 535022, USA<br><br>
+                    <strong>Phone:</strong> +1 5589 55488 55<br>
+                    <strong>Email:</strong> info@example.com<br>
+                  </p> -->
+                </div>
+              </div>
+
+              <div class="col-4 footer-links">
+                <!-- <h4>TATTOO ISANG</h4> -->
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">대표자 : </a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">사업자등록번호 : </a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">통신판매업 신고번호 : </a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">주소 : </a></li>
+                </ul>
+              </div>
+
+              <div class="col-4 footer-newsletter">
+                <h4>고객센터</h4>
+                <p>070 - 1234 - 5678</p>
+                <p>상담시간: 평일 10:00 - 18:00</p>
+                <!-- <form action="" method="post">
+                  <input type="email" name="email"><input type="submit" value="Subscribe">
+                </form> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong><span>TATTOO ISANG</span></strong>. All Rights Reserved
+          </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+    
+</html>

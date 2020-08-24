@@ -1,0 +1,116 @@
+<!-- 로그인 -->
+
+<!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html"><span>TATTOO</span> ISANG</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="area.html">지역별 업체검색</a></li>
+            <li><a href="category.html">장르별 업체검색</a></li>
+            <li><a href="part.html">부위별 업체검색</a></li>
+            <li><a href="advertisement.html">광고안내</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+</header><!-- End Header -->
+
+
+<!-- ======= Main ======= -->
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>업체 로그인</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>로그인</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <section class="my-form">
+        <div class="cotainer">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header text-center" text-align="center">업체 로그인</div>
+                            <div class="card-body">
+                                <form name="my-form" onsubmit="return loginform()" action="/login" method="post">
+                                     <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                                    <div class="form-group">
+                                        <div class="text-center">
+                                            <input type="text" id="userid" class="form-control" name="userid" placeholder="아이디">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="text-center">
+                                            <input type="password" id="password_digest" class="form-control" placeholder="비밀번호">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary" style="width:100%;">로그인</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-6 text-center" style="padding:0;">
+                                            <a href="#" class="btn btn-outline-secondary" text-align="center" style="width:100%;">아이디 찾기</a>
+                                        </div>
+
+                                        <div class="col-6 text-center" style="padding:0;">
+                                            <a href="#" class="btn btn-outline-secondary" text-align="center" style="width:100%;">비밀번호 찾기</a>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        function loginform() {
+
+            var userId = document.forms["my-form"]["userid"].value;
+            var password1 = document.forms["my-form"]["password"].value;
+
+            if (userId == "")
+            {
+                alert("아이디를 입력해주세요!");
+                return false;
+            }
+            else if (password1 == "")
+            {
+                alert("아이디를 입력해주세요!");
+                return false;
+            }            
+
+        }
+
+    </script>
+
+</main><!-- End #main -->
+
+    

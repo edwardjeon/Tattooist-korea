@@ -1,0 +1,556 @@
+<!-- 지역별 업체검색 -->
+
+    <!-- ======= Main ======= -->
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+          <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+              <h2>부위별 업체검색</h2>
+              <ol>
+                <li><a href="home">Home</a></li>
+                <li>부위별 업체검색</li>
+              </ol>
+            </div>
+
+          </div>
+        </section><!-- End Breadcrumbs -->        
+
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+          <div class="container">
+              
+            <div class="row">
+                <!-- <div id="carouselExampleIndicators" class="carousel slide col-md-5" data-ride="carousel" style="margin-bottom:10px;">
+                  <div class="carousel-inner">
+                    
+                    <div class="carousel-item active">
+                        <a href="/partner4">
+                            <img class="d-block w-100" src="/tattoo/assets/img/banner/banner-image1.png" alt="First slide">
+                        </a>
+                    </div>
+                      
+                    <div class="carousel-item">
+                        <a href="/partner5">
+                            <img class="d-block w-100" src="/tattoo/assets/img/banner/banner-image2.png" alt="Second slide">
+                        </a>
+                    </div>
+                      
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div> -->
+                
+                <div class="col-md-4" id="main-banner" style="padding-left: 15px; padding-right: 15px; background-color: white; margin-bottom:25px;">
+                    <div id="banner-head" class="row" style="margin: 0; padding: 5px 0px;">
+                        <div class="col-8">
+                            <h2>
+                                PREMIUM BANNER
+                            </h2>
+                        </div>
+
+                        <div class="col-4" style="padding-left: 0;">
+                            <div style="text-align:right; padding-top: 7px;">
+                              <span class="dot" onclick="currentSlide(1)"></span> 
+                              <span class="dot" onclick="currentSlide(2)"></span> 
+                              <span class="dot" onclick="currentSlide(3)"></span> 
+                              <span class="dot" onclick="currentSlide(4)"></span> 
+                            </div>
+                        </div>
+                    </div>
+                    <div id="banner-body">
+                        <div class="slideshow-container">
+
+                            <div class="mySlides">
+                                <a href="/partner2">
+                                    <img class="d-block w-100" src="/tattoo/assets/img/banner/banner1.jpg" alt="First slide" style="width:100%">
+                                </a>
+                            </div>
+
+                            <div class="mySlides">
+                                <a href="/partner2">
+                                    <img class="d-block w-100" src="/tattoo/assets/img/banner/banner2.jpg" alt="Second slide" style="width:100%">
+                                </a>
+
+                            </div>
+
+                            <div class="mySlides">
+                                <a href="/partner2">
+                                    <img class="d-block w-100" src="/tattoo/assets/img/banner/banner3.jpg" alt="Third slide" style="width:100%">
+                                </a>
+                            </div>
+
+                            <div class="mySlides">
+                                <a href="/partner2">
+                                    <img class="d-block w-100" src="/tattoo/assets/img/banner/banner4.jpg" alt="Second slide" style="width:100%">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+
+                        <script>
+
+                            var slideIndex = 0;
+                            showSlides();
+
+                            function showSlides() {
+                              var i;
+                              var slides = document.getElementsByClassName("mySlides");
+                              var dots = document.getElementsByClassName("dot");
+                              for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";  
+                              }
+                              slideIndex++;
+                              if (slideIndex > slides.length) {slideIndex = 1}    
+                              for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                              }
+                              slides[slideIndex-1].style.display = "block";  
+                              dots[slideIndex-1].className += " active";
+                              setTimeout(showSlides, 2000); // Change image every 2 seconds
+                            }
+
+
+                        </script>
+                    </div>
+                </div>
+                
+                <div id="part" class="col-md-6" style="margin:auto; margin-top: 5px;">
+                    <ul id="portfolio-flters" style="text-align: center;">
+                        <li data-filter="*" class="filter-active">전체</li>
+                        <li data-filter=".filter-category1">귀</li>
+                        <li data-filter=".filter-category2">목</li>
+                        <li data-filter=".filter-category3">쇄골</li>
+                        <li data-filter=".filter-category4">가슴</li>
+                        <li data-filter=".filter-category5">등</li>
+                        <li data-filter=".filter-category6">옆구리</li>
+                        <li data-filter=".filter-category7">윗팔</li>
+                        <li data-filter=".filter-category8">아랫팔</li>
+                        <li data-filter=".filter-category9">손</li>
+                        <li data-filter=".filter-category10">손목</li>
+                        <li data-filter=".filter-category11">허벅지</li>
+                        <li data-filter=".filter-category12">종아리</li>
+                        <li data-filter=".filter-category13">발</li>
+                        <li data-filter=".filter-category14">기타</li>
+                    </ul>
+              </div>
+                
+            </div> 
+              
+            <div class="section-title row">
+              <!-- <span>Portfolio</span> -->
+                <div class="col-md-4">    
+                </div>
+                <div class="col-md-4 col-8">
+                    <h2>우대등록 업체</h2>    
+                </div>
+                <div class="col-md-4 col-4 text-right">
+                    <p><a href="/advertisement" style="border: solid 1px #ddd; color: #444444; padding: 5px 10px;">광고안내</a></p>
+                </div>
+            </div>
+              
+              
+            <div class="row portfolio-container">                
+                  
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category6 filter-category5">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner2'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img2.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>sungdae_tattoo</h4>
+                            <p>건대 블랙워크 작업</p>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category6 filter-category9">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner1'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img1.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>타투이스트 기수</h4>
+                            <p>경기 광명에서 작업</p>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category5 filter-category10 filter-category12">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner3'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img3.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>Tattooist_BEAR</h4>
+                            <p>타투이스트베어</p>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category6 filter-category10">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner4'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img4.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>쥬스타투</h4>
+                            <p>강북구 쥬스타투입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category5 filter-category6 filter-category10">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner5'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img5.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>GUSH TATTOO</h4>
+                            <p>안산 중앙역 1번 타투이스트</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category9 filter-category10 filter-category11">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner6'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img6.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>소금타투</h4>
+                            <p>1인1도안/일본유학파</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category6 filter-category4 filter-category12">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner7'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img7.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>FSEAN_TATTOOS</h4>
+                            <p>대구 동성로 치카노타투</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category6 filter-category9">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img8.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>SSAB_TT</h4>
+                            <p>블랙&그레이 타투이스트</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category5 filter-category6">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img9.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>inklings_uzi</h4>
+                            <p>구월동 라인워크 블랙워크</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category9 filter-category13">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img10.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>Kiwan.tattoo</h4>
+                            <p>구월동 라인워크 블랙워크</p>
+                        </div>
+                    </div>
+                </div>
+                  
+            </div>
+              
+          
+              
+            <div class="section-title row">
+              <!-- <span>Portfolio</span> -->
+                <div class="col-md-4">    
+                </div>
+                <div class="col-md-4 col-8">
+                    <h2>일반등록 업체</h2>    
+                </div>
+                <div class="col-4 text-right">
+                    <p><a href="/advertisement" style="border: solid 1px #ddd; color: #444444; padding: 5px 10px;">광고안내</a></p>
+                </div>
+                
+            </div>
+
+            <div class="row portfolio-container">
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category6 filter-category5">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner1'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img2.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>sungdae_tattoo</h4>
+                            <p>건대 블랙워크 작업</p>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category6 filter-category9">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner2'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img1.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>타투이스트 기수</h4>
+                            <p>경기 광명에서 작업</p>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category5 filter-category10 filter-category12">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner3'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img3.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>Tattooist_BEAR</h4>
+                            <p>타투이스트베어</p>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category6 filter-category10">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner4'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img4.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>쥬스타투</h4>
+                            <p>강북구 쥬스타투입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category5 filter-category6 filter-category10">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner5'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img5.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>GUSH TATTOO</h4>
+                            <p>안산 중앙역 1번 타투이스트</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category9 filter-category10 filter-category11">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner6'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img6.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>소금타투</h4>
+                            <p>1인1도안/일본유학파</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category6 filter-category4 filter-category12">
+                    <div class="portfolio-wrap" OnClick="location.href ='/partner7'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img7.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>FSEAN_TATTOOS</h4>
+                            <p>대구 동성로 치카노타투</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category6 filter-category9">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img8.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>SSAB_TT</h4>
+                            <p>블랙&그레이 타투이스트</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category5 filter-category6">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img9.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>inklings_uzi</h4>
+                            <p>구월동 라인워크 블랙워크</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category9 filter-category13">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img10.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>Kiwan.tattoo</h4>
+                            <p>구월동 라인워크 블랙워크</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category5 filter-category6 filter-category11">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img11.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>Jellybean Tattoo</h4>
+                            <p>감성타투 젤리빈</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category7 filter-category14">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img12.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>문신사 우노</h4>
+                            <p>타투이스트 우노</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category6 filter-category9">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img13.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>셀리 타투</h4>
+                            <p>감성 전문 Sally tattooer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category5 filter-category6 filter-category12">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img14.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>latigre_tattoo</h4>
+                            <p>광주 타투이스트 '호랑'입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-area1">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img15.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>Traditional TTT</h4>
+                            <p>올드스쿨 타투 전문</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-area14">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img16.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>stuff tattoo</h4>
+                            <p>크레용과 드로잉</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-area6">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img17.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>오박사타투</h4>
+                            <p>오_올드스쿨타투</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category1 filter-category6 filter-category12">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img18.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>Team Needler</h4>
+                            <p>트레디셔널 블랙워크 전문</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category5 filter-category6">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img19.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>최리_choilee</h4>
+                            <p>choilee_txtt 블랙워크</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category10 filter-category12">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img20.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>Tattooist VAC</h4>
+                            <p>www.vacpresents.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category3 filter-category10 filter-category14">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img21.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>mint tattoo</h4>
+                            <p>세종 민트타투</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category1 filter-category3 filter-category6">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img22.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>타투이스트 천</h4>
+                            <p>유일무이 오리엔탈 작업</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2dot4 col-md-4 col-6 portfolio-item filter-category7">
+                    <div class="portfolio-wrap" OnClick="location.href ='/#'" style="cursor:pointer;">
+                        <img src="/tattoo/assets/img/portfolio/img23.png" class="img-fluid" alt="">
+                        
+                        <div class="portfolio-new">
+                            <h4>Dstone</h4>
+                            <p>부산 서면 이레즈미</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+          </div>
+        </section><!-- End Portfolio Section -->
+
+
+    </main><!-- End #main -->
+    

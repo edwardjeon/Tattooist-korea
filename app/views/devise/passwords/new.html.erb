@@ -1,0 +1,64 @@
+<!-- 비밀번호 찾기 -->
+
+<main id="main">
+    
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>업체 회원가입</h2>
+          <ol>
+            <li><a href="home">Home</a></li>
+            <li>회원가입</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+        
+
+    
+    <section class="my-form">
+        <div class="cotainer">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header text-center" text-align="center">업체 비밀번호 찾기</div>
+                            <div class="card-body">
+                                <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+                                
+                                    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                                
+                                    <div class="form-inputs">
+                                        <div class="form-group">
+                                            <%= f.input :email,
+                                                    required: true,
+                                                    autofocus: true,
+                                                    placeholder: "이메일 입력",
+                                                    label: false,
+                                                    input_html: { class: "form-control", autocomplete: "email" } %>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-actions" style="margin:10px;">
+                                        <%= f.button :submit, t(".send_me_reset_password_instructions"), class: "btn btn-outline-secondary", style:"width:100%;" %>
+                                    </div>
+                                <% end %> 
+                                
+                                <%= render "devise/shared/links" %>
+                                
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+</main>
+
+
+
+
+
