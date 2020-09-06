@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
   
-    devise_for :members    
+    #devise_for :members    
+    # devise_for :members do
+    #   get '/members/sign_out' => 'devise/sessions#destroy'
+    # end
+    # devise_scope :members do  
+    #    get '/members/sign_out' => 'devise/sessions#destroy'     
+    # end
+    devise_for :members do
+      get '/members/sign_out' => 'devise/sessions#destroy'
+    end
     
     root 'home#index'
     get '/home', to: 'home#index'
@@ -13,6 +22,8 @@ Rails.application.routes.draw do
     get '/gallery-subject', to: 'home#gallery-subject'
     get '/gallery-part', to: 'home#gallery-part'
     #get '/advertisement', :to => redirect('/tattoo/advertisement.html')
+    
+    
     
     #partners
     get '/partner1', to: 'partners#partner1'

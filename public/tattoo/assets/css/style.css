@@ -807,7 +807,7 @@ section {
 }
 
 #tab-items {
-    min-height: 180px;
+    min-height: 170px;
 }
 
 #tab-items ul {
@@ -894,12 +894,12 @@ section {
 }
 
 #main-banner #banner-head {
-    background-color: #ea5903;
+    background-color: #bc2525;
 }
 
 #main-banner #banner-head h2 {
     color: #fff;
-    font-size: 17px;
+    font-size: 14px;
     padding: 7px;
     font-weight: bold;
     margin: 0;
@@ -927,8 +927,8 @@ section {
 /* The dots/bullets/indicators */
 #main-banner .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
   margin: 0 2px;
   background-color: #fff;
   border-radius: 50%;
@@ -1091,6 +1091,32 @@ section {
   margin-bottom: 30px;
 }
 
+.portfolio #portfolio-search {
+    /* margin: 0; */
+    margin-left: 4px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0;
+    
+    /* background: url("/tattoo/assets/img/portfolio-back-area.jpg") no-repeat; */
+    /* background-color: rgba(185,187,173,0.1);
+    background-position: right;
+    background-position-x: 400px;
+    background-size: 120px; */
+    
+    background-position: center;
+    background-size: cover;
+    padding: 40px 0 20px 7px;
+    position: relative;
+}
+
+.portfolio #portfolio-search h3 {
+    font-size: 17px;
+    padding-left: 7px;
+    color: black;
+}
+
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 0 30px 0;
@@ -1099,7 +1125,7 @@ section {
 }
 
 .portfolio #portfolio-flters li {
-  cursor: pointer;
+  /* cursor: pointer;
   margin: 0 10px 5px 0;
   display: inline-block;
   padding: 9px 20px;
@@ -1110,14 +1136,34 @@ section {
   text-transform: uppercase;
   background: #fff;
   margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;  
+  border: 1px solid #01b1d7; */
     
-    border: 1px solid #01b1d7;
+  cursor: pointer;
+  margin: 0;
+  margin-bottom: 3px;
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 12px;
+  /* line-height: 20px; */
+  color: #444444;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;  
+  border: 1px solid #ddd;
+    
 }
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-  background: #01b1d7;
-  color: #fff;
+  /* background: #01b1d7;
+  color: #fff; */
+    
+  background: white;
+  color: black;
+  border: 1px solid #444444;
+    
 }
 
 /* .portfolio #portfolio-flters li:last-child {
@@ -1205,7 +1251,9 @@ section {
 }
 
 .portfolio #category ul li {
-    width: 111px;
+    width: 85px;
+    padding: 10px 0px;
+    font-size: 11px;
     
 }
 
@@ -1217,22 +1265,30 @@ section {
 }
 
 .portfolio #part ul li {
-    width: 80px;
-    
+    width: 86px;
+    padding: 10px 0px;
+    text-align: center;
 }
 
 .portfolio #gal-category ul li {
-    width: 111px;
+    width: 120px;
+    padding: 10px 0px;
+}
+@media (max-width: 575px) {
+  .portfolio #gal-category ul li {
+    width: 90px;
+    font-size: 10px;
+  }
 }
 
 .portfolio #gal-subject ul li {
-    width: 80px;
-    
+    width: 90px;
+    padding: 10px 0px;
 }
 
 .portfolio #gal-part ul li {
-    width: 80px;
-    
+    width: 90px;
+    padding: 10px 0px;
 }
 
 
@@ -1269,11 +1325,11 @@ section {
 
 @media (max-width: 575px) {
   .portfolio .portfolio-wrap .portfolio-new h4 {
-    font-size: 15px;
+    font-size: 13px;
     
   }
   .portfolio .portfolio-wrap .portfolio-new p {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 

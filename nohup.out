@@ -1,0 +1,155 @@
+Warning: the running version of Bundler (2.1.1) is older than the version that created the lockfile (2.1.4). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.1.4`.
+=> Booting Puma
+=> Rails 6.0.3.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.5 (ruby 2.6.5-p114), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Warning: the running version of Bundler (2.1.1) is older than the version that created the lockfile (2.1.4). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.1.4`.
+=> Booting Puma
+=> Rails 6.0.3.2 application starting in development 
+=> Run `rails server --help` for more startup options
+A server is already running. Check /workspace/tattoo-isang/tmp/pids/server.pid.
+Exiting
+Started GET "/" for 172.17.0.1 at 2020-08-25 10:26:15 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:6:in `index'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[36mVisitor Update (0.3ms)[0m  [1m[33mUPDATE "visitors" SET "impressions_count" = ?, "updated_at" = ? WHERE "visitors"."id" = ?[0m  [["impressions_count", 294], ["updated_at", "2020-08-25 10:26:15.532490"], ["id", 1]]
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:15:in `index'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:29:in `index'
+  [1m[36mVisitor Update (0.2ms)[0m  [1m[33mUPDATE "visitors" SET "updated_at" = ?, "impressions_count" = ? WHERE "visitors"."id" = ?[0m  [["updated_at", "2020-08-25 10:26:15.564130"], ["impressions_count", 251], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:29:in `index'
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:29:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1337)
+Completed 200 OK in 132ms (Views: 68.9ms | ActiveRecord: 23.3ms | Allocations: 43846)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-08-25 10:26:23 +0000 ===
+- Goodbye!
+Exiting
+Warning: the running version of Bundler (2.1.1) is older than the version that created the lockfile (2.1.4). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.1.4`.
+=> Booting Puma
+=> Rails 6.0.3.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.5 (ruby 2.6.5-p114), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/category" for 172.17.0.1 at 2020-08-25 10:27:23 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#category as HTML
+  Rendering home/category.html.erb within layouts/application
+  Rendered home/category.html.erb within layouts/application (Duration: 1.6ms | Allocations: 830)
+Completed 200 OK in 62ms (Views: 48.8ms | ActiveRecord: 0.0ms | Allocations: 28602)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-08-25 10:27:28 +0000 ===
+- Goodbye!
+Exiting
+Warning: the running version of Bundler (2.1.1) is older than the version that created the lockfile (2.1.4). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.1.4`.
+=> Booting Puma
+=> Rails 6.0.3.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.5 (ruby 2.6.5-p114), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/category" for 172.17.0.1 at 2020-08-25 10:28:03 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#category as HTML
+  Rendering home/category.html.erb within layouts/application
+  Rendered home/category.html.erb within layouts/application (Duration: 1.6ms | Allocations: 830)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.0ms | Allocations: 28618)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-08-25 10:33:42 +0000 ===
+- Goodbye!
+Exiting
+Warning: the running version of Bundler (2.1.1) is older than the version that created the lockfile (2.1.4). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.1.4`.
+=> Booting Puma
+=> Rails 6.0.3.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.5 (ruby 2.6.5-p114), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/" for 172.17.0.1 at 2020-08-25 11:57:54 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:6:in `index'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[36mVisitor Update (0.3ms)[0m  [1m[33mUPDATE "visitors" SET "impressions_count" = ?, "updated_at" = ? WHERE "visitors"."id" = ?[0m  [["impressions_count", 352], ["updated_at", "2020-08-25 11:57:54.846647"], ["id", 1]]
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:15:in `index'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/home_controller.rb:29:in `index'
+  [1m[36mVisitor Update (0.2ms)[0m  [1m[33mUPDATE "visitors" SET "updated_at" = ?, "impressions_count" = ? WHERE "visitors"."id" = ?[0m  [["updated_at", "2020-08-25 11:57:54.879607"], ["impressions_count", 309], ["id", 2]]
+  ↳ app/controllers/home_controller.rb:29:in `index'
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/home_controller.rb:29:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1337)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:49
+Completed 200 OK in 174ms (Views: 101.7ms | ActiveRecord: 25.0ms | Allocations: 53142)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-08-25 11:58:19 +0000 ===
+- Goodbye!
+Exiting
+Warning: the running version of Bundler (2.1.1) is older than the version that created the lockfile (2.1.4). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.1.4`.
+=> Booting Puma
+=> Rails 6.0.3.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Exiting
+Warning: the running version of Bundler (2.1.1) is older than the version that created the lockfile (2.1.4). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.1.4`.
+=> Booting Puma
+=> Rails 6.0.3.2 application starting in development 
+=> Run `rails server --help` for more startup options
+Puma starting in single mode...
+* Version 4.3.5 (ruby 2.6.5-p114), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-08-26 02:13:31 +0000 ===
+- Goodbye!
+Exiting
