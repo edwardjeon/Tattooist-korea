@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/members/sign_in</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/members/sign_up</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/area</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/category</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/part</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/gallery</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/advertisement</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/partner2</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/members/password/new</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/home</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/gallery-category</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/gallery-subject</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.xn--9t4b11g8xjvnbcu.kr/gallery-part</loc>
+  <lastmod>2020-10-28T13:01:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

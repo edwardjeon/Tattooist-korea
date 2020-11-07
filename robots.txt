@@ -1,0 +1,4 @@
+User-agent: *
+Allow:/
+
+Sitemap: http://www.xn--9t4b11g8xjvnbcu.kr/sitemap.xml

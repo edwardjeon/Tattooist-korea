@@ -40,21 +40,21 @@
                         <div class="tab-inner">
                             <h4 style="padding: 30px;">※TATTOOIST Korea를 선택해야하는 이유!</h4>
                             <div id="effect-image">
-                                <img src="/tattoo/assets/img/effect-image.png" class="img-fluid" alt="">
+                                <img src="/tattoo/assets/img/ad-effect.png" class="img-fluid" alt="">
                             </div>
                             <div class="row counters">
                                 <div class="col-lg-4 col-12 text-center">
                                     <i class="icofont-users"></i>
-                                    <span data-toggle="counter-up">21,243</span>
+                                    <span data-toggle="counter-up"><%= @visitor.impressions_count %></span>
                                     <p>사이트 누적 방문자 수</p>
-                                    <p>일일IP 제외 / 2020.07 기준</p>
+                                    <p>일일IP 제외 / 실시간 기준</p>
                                 </div>
 
                                 <div class="col-lg-4 col-12 text-center">
                                     <i class="icofont-document-folder"></i>
-                                    <span data-toggle="counter-up">1,243</span>
+                                    <span data-toggle="counter-up">072</span>
                                     <p>전체 작업 게시물 수</p>
-                                    <p>2020.07 기준</p>
+                                    <p>2020.10 기준</p>
                                     
                                 </div>
 
@@ -62,14 +62,14 @@
                                     <i class="icofont-chart-growth"></i>
                                     <span data-toggle="counter-up">98</span>
                                     <p>타투이스트 광고 연장률</p>
-                                    <p>2020.07 기준</p>
+                                    <p>2020.10 기준</p>
                                 </div>
                                 
                             </div>
                             
                             <div class="col-md-12 col-sm-12 col-xs-12 effect-detail">
                                 <div class="section-headline text-center">
-                                    <h4>최고의 광고 효율을 자랑하는 타투이상</h4>
+                                    <h4>최고의 광고 효율을 자랑하는 타투이스트</h4>
                                 </div>
                                 <div class="text-center">
                                     <p>같은 광고비를 내더라도 타투이스트에서는 경쟁력 있는 광고효과를 기대할 수 있습니다.</p>
@@ -132,13 +132,74 @@
                                         <li><i class="icofont-minus"></i>갤러리 일괄점프 30회 제공</a></li>
                                     </ul>
                                     <div class="row" style="margin: 0;">
-                                        <select class="form-control col-4" style="width: auto;">
-                                            <option>광고일수(금액)</option>
-                                            <option>1개월(100,000원)</option>
-                                            <option>2개월(180,000원)</option>
-                                            <option>3개월(270,000원)</option>
+                                        
+                                        <% if member_signed_in? %>
+                                            <input type="hidden" id="signedin" value="1">
+                                            <input type="hidden" id="memberinfo" value= "<%= current_member.name %>" >
+                                            
+                                        <% else %>
+                                            <input type="hidden" id="signedin" value="2">
+                                            <input type="hidden" id="memberinfo" value= "nonmember" >
+                                        <% end %>
+                                        
+                                        
+                                        <select id = "normal" class="form-control col-4" style="width: auto;">
+                                            <option value="0">광고일수(금액)</option>
+                                            <option value="1">1개월(100,000원)</option>
+                                            <option value="2">2개월(180,000원)</option>
+                                            <option value="3">3개월(270,000원)</option>
                                         </select>
-                                        <button type="button" class="btn btn-primary col-4" style="width: auto; margin-left: 10px;">결제하기</button>
+                                        
+                                        <!-- <button type="button" class="btn btn-primary col-4" style="width: auto; margin-left: 10px;">결제하기</button> -->
+                                        <button type="button" class="btn btn-primary col-4" onclick="payFunction()" style="width: auto; margin-left: 10px;">결제하기</button>
+                                        <script>
+                                            
+                                            function payFunction() {
+                                                var selector = document.getElementById('normal');
+                                                var value = selector[selector.selectedIndex].value;
+                                                var signedinValue = document.getElementById("signedin").value;
+                                                var memberInfo = document.getElementById("memberinfo").value;
+                                                
+                                                
+                                                if(signedinValue == "1")
+                                                {
+                                                    if (value == "0")
+                                                    {
+                                                        alert("광고일수를 선택해주세요.");
+                                                        return false;
+                                                    }
+                                                    else if(value == "1")
+                                                    {
+                                                        alert(memberInfo + "님, 일반광고 " + value + "개월(100,000원)을 선택해주셨습니다.\n아래 계좌로 입금해주세요.\n입금 확인 후 순차적으로 처리해드리겠습니다.\n카카오뱅크 3333103059516 이현준 ");
+
+
+                                                    }
+                                                    else if(value == "2")
+                                                    {
+                                                        alert(memberInfo + "님, 일반광고 " + value + "개월(180,000원)을 선택해주셨습니다.\n아래 계좌로 입금해주세요.\n입금 확인 후 순차적으로 처리해드리겠습니다.\n카카오뱅크 3333103059516 이현준 ");
+
+
+                                                    }
+                                                    else if(value == "3")
+                                                    {
+                                                        alert(memberInfo + "님, 일반광고 " + value + "개월(270,000원)을 선택해주셨습니다.\n아래 계좌로 입금해주세요.\n입금 확인 후 순차적으로 처리해드리겠습니다.\n카카오뱅크 3333103059516 이현준 ");
+
+
+                                                    }
+                                                    
+
+                                                }
+                                                else
+                                                {
+                                                    alert("로그인 후 이용해주세요.");
+                                                    return false;
+                                                }
+                                                
+                                                
+                                            }
+                                        
+                                        </script>
+                                        
                                     </div>                        
                                 </div>
                                 <div class="col-md-6 col-sm-12 ad-img">
@@ -154,13 +215,73 @@
                                         <li><i class="icofont-minus"></i>갤러리 일괄점프 100회 제공</a></li>
                                     </ul>
                                     <div class="row" style="margin: 0;">
-                                        <select class="form-control col-4" style="width: auto;">
-                                            <option>광고일수(금액)</option>
-                                            <option>1개월(180,000원)</option>
-                                            <option>2개월(350,000원)</option>
-                                            <option>3개월(500,000원)</option>
+                                        
+                                        <% if member_signed_in? %>
+                                            <input type="hidden" id="signedin" value="1">
+                                            <input type="hidden" id="memberinfo" value= "<%= current_member.name %>" >
+                                            
+                                        <% else %>
+                                            <input type="hidden" id="signedin" value="2">
+                                            <input type="hidden" id="memberinfo" value= "nonmember" >
+                                        <% end %>
+                                        
+                                        <select id = "advance" class="form-control col-4" style="width: auto;">
+                                            <option value="0">광고일수(금액)</option>
+                                            <option value="1">1개월(180,000원)</option>
+                                            <option value="2">2개월(350,000원)</option>
+                                            <option value="3">3개월(500,000원)</option>
                                         </select>
-                                        <button type="button" class="btn btn-primary col-4" style="width: auto; margin-left: 10px;">결제하기</button>
+                                        <button type="button" class="btn btn-primary col-4" onclick="payFunction2()" style="width: auto; margin-left: 10px;">결제하기</button>
+                                        
+                                        <script>
+                                            
+                                            function payFunction2() {
+                                                var selector = document.getElementById('advance');
+                                                var value = selector[selector.selectedIndex].value;
+                                                var signedinValue = document.getElementById("signedin").value;
+                                                var memberInfo = document.getElementById("memberinfo").value;
+                                                
+                                                if(signedinValue == "1")
+                                                {
+                                                    if (value == "0")
+                                                    {
+                                                        alert("광고일수를 선택해주세요.");
+                                                        return false;
+                                                    }
+                                                    else if(value == "1")
+                                                    {
+                                                        alert(memberInfo + "님, 우대광고 " + value + "개월(180,000원)을 선택해주셨습니다.\n아래 계좌로 입금해주세요.\n입금 확인 후 순차적으로 처리해드리겠습니다.\n카카오뱅크 3333103059516 이현준 ");
+
+
+                                                    }
+                                                    else if(value == "2")
+                                                    {
+                                                        alert(memberInfo + "님, 우대광고 " + value + "개월(350,000원)을 선택해주셨습니다.\n아래 계좌로 입금해주세요.\n입금 확인 후 순차적으로 처리해드리겠습니다.\n카카오뱅크 3333103059516 이현준 ");
+
+
+                                                    }
+                                                    else if(value == "3")
+                                                    {
+                                                        alert(memberInfo + "님, 우대광고 " + value + "개월(500,000원)을 선택해주셨습니다.\n아래 계좌로 입금해주세요.\n입금 확인 후 순차적으로 처리해드리겠습니다.\n카카오뱅크 3333103059516 이현준 ");
+
+
+                                                    }
+                                                    
+
+                                                }
+                                                else
+                                                {
+                                                    alert("로그인 후 이용해주세요.");
+                                                    return false;
+
+                                                }
+                                                
+                                                
+                                            }
+                                        
+                                        </script>
+                                        
+                                        
                                     </div>                        
                                 </div>
                                 <div class="col-md-6 col-sm-12 ad-img">
@@ -177,13 +298,73 @@
                                         <li><i class="icofont-minus"></i>갤러리 일괄점프 300회 제공</a></li>
                                     </ul>
                                     <div class="row" style="margin: 0;">
-                                        <select class="form-control col-4" style="width: auto;">
-                                            <option>광고일수(금액)</option>
-                                            <option>1개월(270,000원)</option>
-                                            <option>2개월(520,000원)</option>
-                                            <option>3개월(750,000원)</option>
+                                        
+                                        <% if member_signed_in? %>
+                                            <input type="hidden" id="signedin" value="1">
+                                            <input type="hidden" id="memberinfo" value= "<%= current_member.name %>" >
+                                            
+                                        <% else %>
+                                            <input type="hidden" id="signedin" value="2">
+                                            <input type="hidden" id="memberinfo" value= "nonmember" >
+                                        <% end %>
+                                        
+                                        <select id = "mainbanner" class="form-control col-4" style="width: auto;">
+                                            <option value="0">광고일수(금액)</option>
+                                            <option value="1">1개월(270,000원)</option>
+                                            <option value="2">2개월(520,000원)</option>
+                                            <option value="3">3개월(750,000원)</option>
                                         </select>
-                                        <button type="button" class="btn btn-primary col-4" style="width: auto; margin-left: 10px;">결제하기</button>
+                                        <button type="button" class="btn btn-primary col-4" onclick="payFunction3()" style="width: auto; margin-left: 10px;">결제하기</button>
+                                        
+                                        <script>
+                                            
+                                            function payFunction3() {
+                                                var selector = document.getElementById('mainbanner');
+                                                var value = selector[selector.selectedIndex].value;
+                                                var signedinValue = document.getElementById("signedin").value;
+                                                var memberInfo = document.getElementById("memberinfo").value;
+                                                
+                                                if(signedinValue == "1")
+                                                {
+                                                    if (value == "0")
+                                                    {
+                                                        alert("광고일수를 선택해주세요.");
+                                                        return false;
+                                                    }
+                                                    else if(value == "1")
+                                                    {
+                                                        alert(memberInfo + "님, 메인배너광고 " + value + "개월(270,000원)을 선택해주셨습니다.\n아래 계좌로 입금해주세요.\n입금 확인 후 순차적으로 처리해드리겠습니다.\n카카오뱅크 3333103059516 이현준 ");
+
+
+                                                    }
+                                                    else if(value == "2")
+                                                    {
+                                                        alert(memberInfo + "님, 메인배너광고 " + value + "개월(520,000원)을 선택해주셨습니다.\n아래 계좌로 입금해주세요.\n입금 확인 후 순차적으로 처리해드리겠습니다.\n카카오뱅크 3333103059516 이현준 ");
+
+
+                                                    }
+                                                    else if(value == "3")
+                                                    {
+                                                        alert(memberInfo + "님, 메인배너광고 " + value + "개월(750,000원)을 선택해주셨습니다.\n아래 계좌로 입금해주세요.\n입금 확인 후 순차적으로 처리해드리겠습니다.\n카카오뱅크 3333103059516 이현준 ");
+
+
+                                                    }
+                                                    
+
+                                                }
+                                                else
+                                                {
+                                                    alert("로그인 후 이용해주세요.");
+                                                    return false;
+
+                                                }
+                                                
+                                                
+                                            }
+                                        
+                                        </script>
+                                        
+                                        
                                     </div>                        
                                 </div>
                                 <div class="col-md-6 col-sm-12 ad-img">

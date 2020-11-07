@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'sitemaps/index'
+  # resources :posts
     #devise_for :members    
     # devise_for :members do
     #   get '/members/sign_out' => 'devise/sessions#destroy'
@@ -10,6 +12,9 @@ Rails.application.routes.draw do
     devise_for :members do
       get '/members/sign_out' => 'devise/sessions#destroy'
     end
+    
+    get     'sitemap' => 'sitemaps#index', :format => 'xml'
+    # get '/sitemap' => 'sitemaps#index'
     
     root 'home#index'
     get '/home', to: 'home#index'

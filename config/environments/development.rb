@@ -1,6 +1,10 @@
 Rails.application.configure do
   begin
-    config.hosts << /.*\.goorm\.io$/
+    #config.hosts << /.*\.goorm\.io$/
+      #config.hosts << "www.k-tattooist.com"
+      config.hosts << "www.xn--9t4b11g8xjvnbcu.kr"
+      #config.hosts << "www.타투이스트.kr"
+      
   rescue
   end
   # Settings specified here will take precedence over those in config/application.rb.

@@ -21,90 +21,240 @@
     <section class="my-form">
         <div class="cotainer">
             <div class="row justify-content-center">
-                <div class="col-md-4">
+                <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header text-center" text-align="center">업체정보</div>
+                            
+                            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
                             <div class="card-body">
+                                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                                <%= f.error_notification %>
+                                
+                                <div class="row">
+                                    
+                                    <div class="col-lg-4 col-md-4">
 
-                                <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-                                
-                                    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-                                
-                                    <%= f.error_notification %>
-                                
-                                    <div class="form-inputs">
-                                        <div class="form-group">
-                                            <%= f.input :email, required: false, autofocus: true, label: "이메일", disabled: true, input_html: { class:"form-control" } %>
+                                        <!-- form -->
 
-                                            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-                                                <p><%= t(".currently_waiting_confirmation_for_email", email: resource.unconfirmed_email) %></p>
-                                            <% end %>
-                                        </div>
+                                            
+
+                                            
+
+                                            <div class="form-inputs">
+                                                <div class="form-group">
+                                                    <%= f.input :email, required: false, autofocus: true, label: "이메일", disabled: true, input_html: { class:"form-control" } %>
+
+                                                    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                                                        <p><%= t(".currently_waiting_confirmation_for_email", email: resource.unconfirmed_email) %></p>
+                                                    <% end %>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <%= f.input :name, 
+                                                                required: false, 
+                                                                label: "업체명",
+                                                                input_html: { class:"form-control", autocomplete: "name" } %>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <%= f.input :phone, 
+                                                                required: false, 
+                                                                label: "연락처(010-1234-1234)",
+                                                                input_html: { class:"form-control", autocomplete: "phone" } %>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <%= f.input :service, 
+                                                                required: false, 
+                                                                label: "가입된 서비스",
+                                                                disabled: true,
+                                                                input_html: { class:"form-control", autocomplete: "service" } %>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <%= f.input :service_period, 
+                                                                required: false, 
+                                                                label: "서비스 유효기간",
+                                                                disabled: true,
+                                                                input_html: { class:"form-control", autocomplete: "service_period" } %>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <%= f.input :password,
+                                                                hint: t(".leave_blank_if_you_don_t_want_to_change_it"),
+                                                                required: false,
+                                                                label: "새 비밀번호",
+                                                                input_html: { autocomplete: "new-password", class:"form-control" } %>                                            
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <%= f.input :password_confirmation,
+                                                                required: false,
+                                                                label: "새 비밀번호 확인",
+                                                                input_html: { autocomplete: "new-password", class:"form-control" } %>
+                                                </div>
+
+                                                <div class="form-group" >
+                                                    <%= f.input :current_password,
+                                                                hint: t(".we_need_your_current_password_to_confirm_your_changes"),
+                                                                required: false,
+                                                                label: "현재 비밀번호",
+                                                                input_html: { autocomplete: "current-password", class:"form-control", id:"cur-password" } %>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="form-actions" onclick="confirmFunction()">
+                                                <%= f.button :submit, "업체정보 변경", class: "btn btn-primary", style:"width:100%;" %>
+                                            </div>
                                         
-                                        <div class="form-group">
-                                            <%= f.input :name, 
-                                                        required: false, 
-                                                        label: "이름",
-                                                        input_html: { class:"form-control", autocomplete: "name" } %>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <%= f.input :phone, 
-                                                        required: false, 
-                                                        label: "연락처",
-                                                        input_html: { class:"form-control", autocomplete: "phone" } %>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <%= f.input :service, 
-                                                        required: false, 
-                                                        label: "가입된 서비스",
-                                                        disabled: true,
-                                                        input_html: { class:"form-control", autocomplete: "service" } %>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <%= f.input :service_period, 
-                                                        required: false, 
-                                                        label: "서비스 유효기간",
-                                                        disabled: true,
-                                                        input_html: { class:"form-control", autocomplete: "service_period" } %>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <%= f.input :password,
-                                                        hint: t(".leave_blank_if_you_don_t_want_to_change_it"),
-                                                        required: false,
-                                                        label: "새 비밀번호",
-                                                        input_html: { autocomplete: "new-password", class:"form-control" } %>                                            
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <%= f.input :password_confirmation,
-                                                        required: false,
-                                                        label: "새 비밀번호 확인",
-                                                        input_html: { autocomplete: "new-password", class:"form-control" } %>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <%= f.input :current_password,
-                                                        hint: t(".we_need_your_current_password_to_confirm_your_changes"),
-                                                        required: false,
-                                                        label: "현재 비밀번호",
-                                                        input_html: { autocomplete: "current-password", class:"form-control" } %>
-                                        </div>
+                                            <script>
+                                            
+                                                function confirmFunction() {
+                                                    
+                                                    var passValue = document.getElementById("cur-password").value;
+                                                    
+                                                    
+                                                    if (passValue == "")
+                                                    {
+                                                        alert("변경 사항을 반영하려면 현재 비밀번호를 입력하세요.");
+                                                        return false;
+                                                    }
+                                                    else
+                                                    {
+                                                        alert("업로드한 이미지는 관리자 승인 후 처리해드립니다.");
+
+                                                    }
+
+                                                }
+
+                                            </script>
+
+
+                                        <!-- <%= link_to t(".cancel_my_account"), registration_path(resource_name), data: { confirm: t(".are_you_sure") }, method: :delete %></p> -->
+
+                                        <%= link_to t("devise.shared.links.back"), :back %>      
+
                                     </div>
 
-                                    <div class="form-actions">
-                                        <%= f.button :submit, "업체정보 변경", class: "btn btn-primary", style:"width:100%;" %>
+
+                                    <div class="col-lg-4 col-md-4">
+
+                                        <div class="form-inputs">
+                                            <div class="form-group">
+                                                <%= f.input :address, 
+                                                            required: false, 
+                                                            label: "업체 주소",
+                                                            input_html: { class:"form-control", autocomplete: "address" } %>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <%= f.input :homepage, 
+                                                            required: false, 
+                                                            label: "업체 홈페이지",
+                                                            input_html: { class:"form-control", autocomplete: "homepage" } %>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <%= f.input :sns, 
+                                                            required: false, 
+                                                            label: "업체 SNS",
+                                                            input_html: { class:"form-control", autocomplete: "sns" } %>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <%= f.input :chat, 
+                                                            required: false, 
+                                                            label: "업체 메신저",
+                                                            input_html: { class:"form-control", autocomplete: "chat" } %>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <!-- <%= f.input :contents,
+                                                            required: false,
+                                                            label: "업체 소개",
+                                                            input_html: { class:"form-control", autocomplete: "contents" } %>   -->
+                                                <%= f.label :contents, '업체 소개' %>
+                                                <%= f.text_area :contents, 
+                                                            required: false, 
+                                                            label: "업체 소개",
+                                                            size: '50x5',
+                                                            class: 'form-control'%>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                <% end %>
 
-                                <!-- <%= link_to t(".cancel_my_account"), registration_path(resource_name), data: { confirm: t(".are_you_sure") }, method: :delete %></p> -->
+                                    <div class="col-lg-4 col-md-4">
+                                        
+                                        <div class="form-inputs">
+                                            <div class="form-group">
+                                                <div class="title row">
+                                                    
+                                                    <div class="col-lg-6">
+                                                        <!-- <%= f.label :mavatar, '업체 타이틀 이미지' %><br/>
+                                                        <%= f.file_field :mavatar, :class => 'fileupload' %> -->
+                                                        
+                                                        <%= f.label :image, '업체 타이틀 이미지' %><br>
+                                                        
+                                                        <!-- <%= f.file_field :image, accept: 'image/png,image/gif,image/jpeg' %> -->
+                                                        <%= f.file_field :image, :class => 'fileupload' %>
+                                                        
 
-                                <%= link_to t("devise.shared.links.back"), :back %>      
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <img src="/tattoo/assets/img/portfolio/img1-1.png" class="img-fluid rounded-circle" alt="" style="width:60%;">
+                                                        
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="title row">
+                                                    <div class="col-12">
+                                                        <%= f.label :avatar, '업체 내부사진' %><br/>
+                                                        <%= f.file_field :avatar, :class => 'fileupload' %>
+
+
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <img src="/tattoo/assets/img/portfolio/img1-2.png" class="img-thumbnail rounded" alt="">
+                                                            </div>
+
+                                                            <div class="col-4">
+                                                                <img src="/tattoo/assets/img/portfolio/img1-3.png" class="img-thumbnail rounded" alt="">
+                                                            </div>
+
+                                                            <div class="col-4">
+                                                                
+                                                                <img src="/tattoo/assets/img/portfolio/img1-4.png" class="img-thumbnail rounded" alt="">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                </div>
+                                                
+                                                <div class="title row">
+                                                    <div class="col-12">
+                                                        <%= f.label :avatar, '업체 갤러리' %><br/>
+                                                        <%= f.file_field :avatar, :class => 'fileupload' %>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
                                 
                             </div>
+                            
+                            <% end %>
+                            
                         </div>
                 </div>
             </div>
