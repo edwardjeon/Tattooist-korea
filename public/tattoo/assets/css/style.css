@@ -596,7 +596,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     
-    background: url("/tattoo/assets/img/background1.jpg") center center no-repeat;
+    background: url("/tattoo/assets/img/background.jpg") center center no-repeat;
     background-size: cover;
     padding: 100px 0 14px 0;
     position: relative;
@@ -1312,14 +1312,14 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-new h4 {
-  font-size: 20px;
+  font-size: 14px;
   color: #fff;
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-new p {
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
 }
 

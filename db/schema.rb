@@ -56,8 +56,7 @@ ActiveRecord::Schema.define(version: 2020_08_12_103929) do
 
   create_table "users", force: :cascade do |t|
     t.string "userid"
-    t.string "password"
-    t.string "password_confirm"
+    t.string "password_digest"
     t.string "name"
     t.string "email"
     t.string "phone"
